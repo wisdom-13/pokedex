@@ -1,10 +1,16 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import DetailPage from './pages/DetailPage';
+import IndexPage from './pages/IndexPage';
 
 function App() {
   return (
-    <div className="App">
-      app
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/:id" element={<DetailPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
