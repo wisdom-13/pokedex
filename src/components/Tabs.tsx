@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled/macro";
 import { Color } from "../types";
 import { mapColorToHex } from "../utils";
+import About from "./About";
 
 const List = styled.ul`
   list-style: none;
@@ -37,17 +38,19 @@ interface Props {
 
 const Tabs: React.FC<Props> = ({ tab, onClick, color }) => {
   return (
-    <List>
-      <ListItem onClick={() => onClick('about')}>
-        <TabButton active={tab === 'about'} color={mapColorToHex(color?.name)}>About</TabButton>
-      </ListItem>
-      <ListItem onClick={() => onClick('stats')}>
-        <TabButton active={tab === 'stats'} color={mapColorToHex(color?.name)}>Stats</TabButton>
-      </ListItem>
-      <ListItem onClick={() => onClick('evolution')}>
-        <TabButton active={tab === 'evolution'} color={mapColorToHex(color?.name)}>Evolution</TabButton>
-      </ListItem>
-    </List>
+    <>
+      <List>
+        <ListItem onClick={() => onClick('about')}>
+          <TabButton active={tab === 'about'} color={mapColorToHex(color?.name)}>About</TabButton>
+        </ListItem>
+        <ListItem onClick={() => onClick('stats')}>
+          <TabButton active={tab === 'stats'} color={mapColorToHex(color?.name)}>Stats</TabButton>
+        </ListItem>
+        <ListItem onClick={() => onClick('evolution')}>
+          <TabButton active={tab === 'evolution'} color={mapColorToHex(color?.name)}>Evolution</TabButton>
+        </ListItem>
+      </List>
+    </>
   )
 }
 
