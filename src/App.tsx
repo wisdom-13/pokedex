@@ -1,4 +1,6 @@
 import React from 'react';
+import './App.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DetailPage from './pages/DetailPage';
 import IndexPage from './pages/IndexPage';

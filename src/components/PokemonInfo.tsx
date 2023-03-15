@@ -81,7 +81,7 @@ const Image = styled.img`
 `;
 
 interface Props {
-  id: string;
+  id?: string;
   name?: string;
   types?: Array<Type>
   color?: Color;
@@ -89,7 +89,7 @@ interface Props {
 
 const PokemonInfo: React.FC<Props> = ({ id, name, types, color }) => {
 
-  const formatNumbering = (index: string): string => {
+  const formatNumbering = (index?: string): string => {
     return `#${String(index).padStart(3, '0')}`;
   }
 

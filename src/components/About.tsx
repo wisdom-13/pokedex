@@ -154,7 +154,6 @@ const About: React.FC<Props> = ({
         </InfoContainer>
       </InfoContainerWrapper>
       {abilities && <Abilities abilities={abilities} />}
-
     </Base>
   )
 }
